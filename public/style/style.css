@@ -44,8 +44,9 @@ h2:after {
 a{
 	text-decoration: none;
 }
-a:hover, a:active, a:visited{
+a:visited, a:active, a:hover, a:link{
 	text-decoration: none !important;
+	background-color: transparent !important;
 }
 
 /* navigation styling */
@@ -75,6 +76,14 @@ nav ul li a, nav ul li ul li a,.navbar-brand{
 	padding: 20px !important;
 	text-align: center;
 	margin: 20px auto;
+}
+nav ul li a:hover::after {
+    content:"";
+    position:absolute;
+    left:25%;
+    right:25%;
+    bottom:0;
+    border:2px solid #96281B;
 }
 
 /* Caret color */

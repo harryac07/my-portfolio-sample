@@ -101,6 +101,7 @@ $(document).ready(function() {
 		}
 	}); /* end scroll event */
 	
+	/* arrow up click : move to top of document */
 	$(".arrow-up").click(function(){
 		$("html, body").animate({
 			scrollTop: 0
@@ -108,11 +109,37 @@ $(document).ready(function() {
 		return false;
 	});
 
-	/* .navbar-toggle */
+	/* .navbar-toggle on small devices : onclick */
 	$(".navbar-toggle ").click(function(){
 		$('#myNavbar').css({
 			'height':'100vh !important'
 		});
+	});
+
+	/*navbar link click */
+	$('.home').click(function(e){
+		$("html, body").animate({
+			scrollTop: 0
+		}, "slow");
+		e.preventDefault();
+	});
+	$('.skills-nav').click(function(e){
+		$("html, body").animate({
+			scrollTop: skillsTop
+		}, "slow");
+		e.preventDefault();	
+	});
+	$('.portfolio-nav').click(function(e){
+		$("html, body").animate({
+			scrollTop: portfolioTop
+		}, "slow");
+		e.preventDefault();	
+	});
+	$('.contact-nav').click(function(e){
+		$("html, body").animate({
+			scrollTop: contactTop
+		}, "slow");
+		e.preventDefault();	
 	});
 
 		

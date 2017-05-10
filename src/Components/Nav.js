@@ -16,10 +16,10 @@ class Nav extends Component{
 					    </div>
 					    <div className="collapse navbar-collapse" id="myNavbar">
 					      	<ul className="nav navbar-nav navbar-right">
-						        <li className="active home"><a href="#">HOME</a></li>
-						        <li className=" skills-nav"><a href="#">SKILLS</a></li>
-						        <li className=" portfolio-nav"><a href="#">PORTFOLIO</a></li> 
-						        <li className=" contact-nav"><a href="#">CONTACT</a></li> 
+						        <li className="active home"><a>HOME</a></li>
+						        <li className=" skills-nav"><a>SKILLS</a></li>
+						        <li className=" portfolio-nav"><a>PORTFOLIO</a></li> 
+						        <li className=" contact-nav"><a>CONTACT</a></li> 
 					      	</ul>
 					    </div>
 					</div>

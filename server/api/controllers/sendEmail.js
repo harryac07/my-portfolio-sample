@@ -9,7 +9,6 @@ var sendJSONresponse = function(res, status, content) {
 
 /* Send email */
 module.exports.sendMail = function(req, res) {
-	// console.log(req);
 	var transporter = nodemailer.createTransport({
 		service: 'gmail',
 		auth: {
@@ -22,13 +21,12 @@ module.exports.sendMail = function(req, res) {
 		from: req.body.email, // sender address
 		to : 'harry_ac07@yahoo.com',
 		subject: 'feedback by '+req.body.name, // Subject line
-		html: "<h3>This feedback was sent by : </h3>Email : "+req.body.email+"<br>Phone : "+req.body.phone+"<br><br>"+req.body.comment+"<br><br>sent at : "+Date()
+		html: "<h3>This feedback was sent by : </h3>Email : "+req.body.email+"<br><br>"+req.body.feedback+"<br><br>sent at : "+Date()
 			// html or text
 	};
 
 	transporter.sendMail(mailOptions, function(err, info) {
 		if (err) {
-			console.log(err);
 			return;
 		} else if (!info) {
 			sendJSONresponse(res, 404, {

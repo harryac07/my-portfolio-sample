@@ -327,14 +327,14 @@ label{
 }
 /* Active state */
  .group>input:focus ~ label, input:valid ~ label {
-    top:-20px;
-    font-size:14px;
-    color:#96281B;
+    top:-20px !important;
+    font-size:14px !important;
+    color:#96281B !important;
 }
 .group>textarea:focus ~ label, textarea:valid ~ label {
-    top:-20px;
-    font-size:14px;
-    color:#96281B;
+    top:-20px !important;
+    font-size:14px !important;
+    color:#96281B !important;
 }
 /* Underlining Bars */
  .bar {

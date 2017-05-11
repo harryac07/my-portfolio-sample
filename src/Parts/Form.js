@@ -22,7 +22,7 @@ class Form extends Component{
 			feedback:feedback
 		})
 		.then(function (response) {
-			console.log('feedback sent');
+			console.log('Thank you for your feedback!');
 		})
 		.catch(function (error) {
 		    console.log(error);

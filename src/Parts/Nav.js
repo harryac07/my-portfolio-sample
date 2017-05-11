@@ -24,6 +24,7 @@ class Nav extends Component{
 					    </div>
 					</div>
 				</nav>
+				<div className="show-on-fix"></div>
 				<h1 className="text-center main-header">WEB DEVELOPER</h1>
 			  	<h2 className="text-center">FRONT AND BACK ENDS</h2>
 				<img src="/images/me.jpg" className="img img-responsive main_image" style={{height:"275px",width:"275px"}}/>

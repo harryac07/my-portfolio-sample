@@ -109,6 +109,12 @@ nav ul li.active a{
 	text-shadow : 2px 1px #ccc;
 	padding: 20px 0px !important;
 }
+
+.show-on-fix{
+	display: none;
+	background-color: transparent;
+}
+
 .dropdown-menu{
 	background-color: gray !important;
 }
@@ -567,7 +573,7 @@ address span{
 		width: 100%;
 	}
 	address{
-		width: 100%;
+		width: 80%;
 		padding: 10px; /* media query needed */
 	}
 }

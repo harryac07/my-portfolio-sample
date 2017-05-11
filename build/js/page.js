@@ -18,9 +18,9 @@ $(document).ready(function() {
 		scale: 0.8,
 		easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
 		reset: false
-	},50);
+	},50); /* scroll reveal ends here */
 
-
+	/* Navigation */
 	var navTop = $(".navigation").offset().top;
 	var skillsTop = $(".skills").offset().top;
 	var portfolioTop = $(".portfolio").offset().top;
@@ -31,8 +31,11 @@ $(document).ready(function() {
 	var skillsHeight = $(".skills").offset().top + $(".skills").outerHeight(true);
 	var contactHeight = $(".footer").offset().top + $(".footer").outerHeight(true);
 
+	/* take navbar height to maintain it when it is fixed! and cut away */
+	var navbarHeight = $(".navbar").offset().top + $(".navbar").outerHeight(true);
+
 	/* on scroll event */
-	$(document).scroll(function() {
+	$(document).scroll(function(e) {
 		
 		if ($(document).scrollTop() >= 80) {
 
@@ -53,21 +56,30 @@ $(document).ready(function() {
 			    '-ms-transition': 'background-color 500ms linear',
 			    'transition': 'background-color 500ms linear'
 			});
-			$('.navigation').css({
-				'height':navHeight+"px !important"
+			$('.show-on-fix').css({
+				'display':"block",
+				'height':navbarHeight+'px'
 			});
-
+			/* animation in navbar appear */
 			$('.navbar').addClass('animated fadeInDown');
+
 		}else{
 
 			/* hide scroll-to-top arrow */
 			$('.arrow-up').css('display','none');
+
 			/* remove navbar fixed and bg color */
 			$(".navbar").css({
 				'position': 'relative',
 				'background-color':''
 			});	
 
+			/* hide div which prevent element move due to nav-fixed*/
+			$('.show-on-fix').css({
+				'display':"none"
+			});
+
+			/*hide animation and navbar fix itself */
 			$('.navbar').removeClass('animated fadeInDown');		
 		}
 
@@ -103,7 +115,8 @@ $(document).ready(function() {
 			$(".portfolio-nav").removeClass('active');
 			$(".skills-nav").removeClass('active');
 		}
-	}); /* end scroll event */
+		e.preventDefault();
+	}); /* end scroll event & navigation */
 	
 	/* arrow up click : move to top of document */
 	$(".arrow-up").click(function(){

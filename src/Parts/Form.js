@@ -37,7 +37,7 @@ class Form extends Component{
 		setTimeout(function() { 
 			this.setState({feedback: false});
 			document.querySelectorAll('.alert .alert-info')[0].style.visibility = 'hidden';
-		}.bind(this), 2200);
+		}.bind(this), 2500);
 
 	}
 

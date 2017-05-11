@@ -1,6 +1,8 @@
 import React,{Component} from 'react';
 
-class Footer extends Component{
+import Form from './Form';
+
+class Contact extends Component{
 	render(){
 		return(
 			<div className="container footer">
@@ -23,30 +25,7 @@ class Footer extends Component{
 					</div>
 					<div className="row">
 						<div className="col-sm-6">
-						    <div id="SearchContainer">
-						        <form>
-						            <div className="group">
-						                <input type="text" id="Name" required />
-						                <span className="highlight"></span>
-						                <span className="bar"></span>
-						                <label>Name</label>
-						            </div>
-						            <div className="group">
-						                <input type="email" id="Email" required />
-						                <span className="highlight"></span>
-						                <span className="bar"></span>
-						                <label>Email</label>
-						            </div>
-						            <div className="group">
-						                <textarea name="feedback" required></textarea>
-						                <span className="highlight"></span>
-						                <span className="bar"></span>
-						                <label>Feedback</label>
-						            </div>
-
-						            <button type="submit" id="Send">Submit Review</button>
-						        </form>
-						    </div>
+						<Form />
 						</div>
 
 						<div className="col-sm-6">
@@ -72,4 +51,4 @@ class Footer extends Component{
 		);
 	}
 }
-export default Footer;
+export default Contact;

@@ -538,8 +538,32 @@ address span{
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1281px) {
 	body{
-		width: 80%;
-		margin: 0 auto;
+		width: 100% !important;
+		margin: 0 auto !important;
+	}
+
+
+	/* portfolio */
+	.portfolio .row{
+		width: 100%;
+		padding: 0px;
+	}
+	.portfolio .row .col-sm-4{
+		padding: 5px !important;
+	}
+	.portfolio .row .col-sm-4 img{
+		height: 35vh; /* media query needed */
+		width: 100%;
+	} /* portfolio ends */
+
+	/* footer */
+
+	#SearchContainer { 
+		width: 100%;
+	}
+	address{
+		width: 100%;
+		padding: 10px; /* media query needed */
 	}
 }
 

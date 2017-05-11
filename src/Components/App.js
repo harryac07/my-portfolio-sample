@@ -5,10 +5,11 @@ import 'bootstrap/dist/js/bootstrap';
 import 'bootstrap/dist/css/bootstrap.css'
 
 
-import Nav from './Nav';
-import Skills from './Skills';
-import Portfolio from './Portfolio';
-import Footer from './Footer';
+import Nav from '../Parts/Nav';
+import Skills from '../Parts/Skills';
+import Portfolio from '../Parts/Portfolio';
+import Contact from '../Parts/Contact';
+import Footer from '../Parts/Footer';
 
 class App extends Component {
   render() {
@@ -17,12 +18,8 @@ class App extends Component {
       		<Nav />
       		<Skills />
       		<Portfolio />
-      		<Footer />
-
-		  	<div className="copyright container-fluid text-center">
-				<h3>CopyRight</h3>
-				<a href="https://www.linkedin.com/in/hari-adhikari-6a149098/" target="blank">HARIA</a> &copy; 2017 privacy policy
-			</div>
+      		<Contact />
+          <Footer />
       	</div>
     );
   }

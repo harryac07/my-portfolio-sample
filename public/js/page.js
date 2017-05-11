@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+	/* scroll animation using scrollreveal */
 	window.sr = ScrollReveal({reset:true});
 	sr.reveal('.skills-animate',{
 		origin: 'bottom',
@@ -31,7 +33,6 @@ $(document).ready(function() {
 
 	/* on scroll event */
 	$(document).scroll(function() {
-
 		
 		if ($(document).scrollTop() >= 80) {
 
@@ -51,6 +52,9 @@ $(document).ready(function() {
 			    '-webkit-transition': 'background-color 500ms linear',
 			    '-ms-transition': 'background-color 500ms linear',
 			    'transition': 'background-color 500ms linear'
+			});
+			$('.navigation').css({
+				'height':navHeight+"px !important"
 			});
 
 			$('.navbar').addClass('animated fadeInDown');
@@ -85,7 +89,7 @@ $(document).ready(function() {
 			$(".portfolio-nav").removeClass('active');
 			$(".contact-nav").removeClass('active');
 		}
-		if (scrollHeight >= skillsHeight-150 && scrollHeight < portfolioHeight-100) {
+		if (scrollHeight >= skillsHeight-150 && scrollHeight < portfolioHeight-150) {
 			$(".portfolio-nav").addClass('active');
 
 			$(".home").removeClass('active');
